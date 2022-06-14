@@ -18,7 +18,7 @@ nltk.download('wordnet', quiet=True)
 
 class Chatbot(object):
 
-    def __init__(self, intents, intent_methods={}, model_name="assistant_model"):
+    def __init__(self, intents, intent_methods={}, model_name="model"):
         self.intents = intents
         self.intent_methods = intent_methods
         self.model_name = model_name
