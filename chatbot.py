@@ -18,7 +18,7 @@ nltk.download('wordnet', quiet=True)
 
 class Chatbot(object):
 
-    def __init__(self, intents, intent_methods={}, model_name="model"):
+    def __init__(self, intents, intent_methods:dict={}, model_name="model"):
         self.intents = intents
         self.intent_methods = intent_methods
         self.model_name = model_name
@@ -129,7 +129,7 @@ class Chatbot(object):
             return_list.append({'intent': self.classes[r[0]], 'probability': str(r[1])})
         return return_list
 
-    def _get_response(self, ints, intents_json):
+    def get_response(self, ints, intents_json):
         try:
             tag = ints[0]['intent']
             list_of_intents = intents_json['intents']
