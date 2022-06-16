@@ -147,4 +147,4 @@ class Chatbot(object):
         if ints[0]['intent'] in self.intent_methods.keys():
             self.intent_methods[ints[0]['intent']]()
         else:
-            return self._get_response(ints, self.intents)
+            return self.get_response(ints, self.intents)
